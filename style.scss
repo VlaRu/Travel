@@ -3,11 +3,13 @@
 
 //  sass style.scss style.css
 section{
-  width: 1440px;
+  width: 100%;
 }
 
 .container{ 
+  width: 1440px;
   @include flex(flex,column,center,center);
+  margin: 0 auto;
   background: url(./assets/images/main-bg.png) center top no-repeat, url(./assets/images/footer-bg.png) center bottom no-repeat;
   @media screen and (max-width: $mobile){
     background-image: url(./assets/images/mobile-bg.png), url(./assets/images/mobile-footer-bg.png);
@@ -31,23 +33,71 @@ header{
   width: calc(548px / 892px * 100%);
   margin-left: calc(120px / 1440px * 100%);
   margin-top: 32px;
+  margin-bottom: 290px;
+}
+
+.title{
+  @include font($font-aleo,700,5rem);
+  line-height: 96px;
+  color: #fff;
+}
+
+.text-explore{
+  @include font($font-aleo,700,20px);
+  line-height: 24px;
+  color: #fff;
+  margin: 46px 0;
+}
+
+.search{
+  width: 100%;
+  height: 95px;
+  background: rgba(255, 255, 255, 0.7);
+  border-radius: 16px;
+
+  &::placeholder{
+    @include font($font-aleo,400,24px);
+    line-height: 29px;
+    color: $main-color;
+    text-indent: 3%;
+  }
+}
+
+.search-container{
+  position: relative;
+
+  .btn-search{
+    position: absolute;
+    right: 2%;
+    top: 20%;
+  }
 }
 
 .section-steps{
   @include flex(flex,column,space-between,center);
+  margin-top: 20px;
+  margin-bottom: 100px;
 }
 
 .steps-container{
   width: calc( 1177px / 1440px * 100%);
+  margin-top: 40px;
 }
 
-.steps-icon-container{
-  
+.steps-icon-container{  
   @include flex(flex,row,space-between,center);
 }
 
 .steps-img-container{
   @include flex(flex,column,center,center);
+}
+
+.steps-img{
+  width: 100px;
+  height: 100px;
+  @include flex(flex,row,center,center);
+  background-color: $main-color;
+  border-radius: 16px;
 }
 
 .section-destination{
@@ -58,19 +108,62 @@ header{
 .destination-container{
   width: calc( 2520px / 1440px * 100%);
   @include flex(flex,row,space-between,center);
+  margin-top: 45px;
+  margin-bottom: 25px;
+  height: 800px;
+}
+
+.pictures-destination{
+  position: relative;
 }
 
 .destination-img{
+  width: 95%;
+  height: 800px;
   border-radius: 16px;
+}
+
+.city-name{
+  position: absolute;
+  bottom: 5%;
+  left: 2%;
+  @include font($font-red,500,32px);
+  line-height: 42px;
+  color: #fff;
+}
+
+.btn-destination{
+ width: 80px;
+ @include flex(flex,row,space-between,center);
+ margin-bottom: 40px;
+
+ .btn-elipse{
+  background-color: rgba(242, 120, 92, 0.5);
+  border-radius: 100%
+ }
 }
 
 .section-stories{
   @include flex(flex,column,center,center);
+  margin-top: 80px;
+  padding-bottom: 40px;
+}
+
+.stories-background{
+  @include flex(flex,column,center,center);
   background-color: rgba(255, 255, 255, 0.7);
+  margin-top: 40px;
+}
+
+.stories-container{
+  width: calc( 1200px / 1440px * 100%);
+  margin-top: 40px;
+  margin-bottom: 55px;
 }
 
 .stories-img-container{
   @include flex(flex,row,center,center);
+  margin-bottom: 30px;
 }
 
 .footer{
@@ -84,6 +177,7 @@ header{
 }
 
 .navigation{
+  width: calc( 527px / 1440px * 100%);
   @include font($font-red,500,16px);
   line-height: 21px;
   color: #fff;
@@ -91,24 +185,6 @@ header{
 
 .navigation-list{
   @include flex(flex,row,space-between,center);
-}
-
-.title{
-  @include font($font-aleo,700,5rem);
-  line-height: 96px;
-  color: #fff;
-}
-
-.text-explore{
-  @include font($font-aleo,700,20px);
-  line-height: 24px;
-  color: #fff;
-}
-
-.city-name{
-  @include font($font-red,500,32px);
-  line-height: 42px;
-  color: #fff;
 }
 
 .heading-stories{

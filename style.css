@@ -88,14 +88,16 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 section {
-  width: 1440px;
+  width: 100%;
 }
 
 .container {
+  width: 1440px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  margin: 0 auto;
   background: url(./assets/images/main-bg.png) center top no-repeat, url(./assets/images/footer-bg.png) center bottom no-repeat;
 }
 @media screen and (max-width: 575px) {
@@ -127,6 +129,48 @@ header {
   width: 61.4349775785%;
   margin-left: 8.3333333333%;
   margin-top: 32px;
+  margin-bottom: 290px;
+}
+
+.title {
+  font-family: "Aleo", serif;
+  font-weight: 700;
+  font-size: 5rem;
+  line-height: 96px;
+  color: #fff;
+}
+
+.text-explore {
+  font-family: "Aleo", serif;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 24px;
+  color: #fff;
+  margin: 46px 0;
+}
+
+.search {
+  width: 100%;
+  height: 95px;
+  background: rgba(255, 255, 255, 0.7);
+  border-radius: 16px;
+}
+.search::placeholder {
+  font-family: "Aleo", serif;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 29px;
+  color: #F2785C;
+  text-indent: 3%;
+}
+
+.search-container {
+  position: relative;
+}
+.search-container .btn-search {
+  position: absolute;
+  right: 2%;
+  top: 20%;
 }
 
 .section-steps {
@@ -134,10 +178,13 @@ header {
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
+  margin-top: 20px;
+  margin-bottom: 100px;
 }
 
 .steps-container {
   width: 81.7361111111%;
+  margin-top: 40px;
 }
 
 .steps-icon-container {
@@ -154,6 +201,17 @@ header {
   align-items: center;
 }
 
+.steps-img {
+  width: 100px;
+  height: 100px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  background-color: #F2785C;
+  border-radius: 16px;
+}
+
 .section-destination {
   display: flex;
   flex-direction: column;
@@ -168,10 +226,43 @@ header {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+  margin-top: 45px;
+  margin-bottom: 25px;
+  height: 800px;
+}
+
+.pictures-destination {
+  position: relative;
 }
 
 .destination-img {
+  width: 95%;
+  height: 800px;
   border-radius: 16px;
+}
+
+.city-name {
+  position: absolute;
+  bottom: 5%;
+  left: 2%;
+  font-family: "Red Hat Text", sans-serif;
+  font-weight: 500;
+  font-size: 32px;
+  line-height: 42px;
+  color: #fff;
+}
+
+.btn-destination {
+  width: 80px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 40px;
+}
+.btn-destination .btn-elipse {
+  background-color: rgba(242, 120, 92, 0.5);
+  border-radius: 100%;
 }
 
 .section-stories {
@@ -179,7 +270,23 @@ header {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  margin-top: 80px;
+  padding-bottom: 40px;
+}
+
+.stories-background {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   background-color: rgba(255, 255, 255, 0.7);
+  margin-top: 40px;
+}
+
+.stories-container {
+  width: 83.3333333333%;
+  margin-top: 40px;
+  margin-bottom: 55px;
 }
 
 .stories-img-container {
@@ -187,6 +294,7 @@ header {
   flex-direction: row;
   justify-content: center;
   align-items: center;
+  margin-bottom: 30px;
 }
 
 .footer {
@@ -205,6 +313,7 @@ header {
 }
 
 .navigation {
+  width: 36.5972222222%;
   font-family: "Red Hat Text", sans-serif;
   font-weight: 500;
   font-size: 16px;
@@ -217,30 +326,6 @@ header {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-}
-
-.title {
-  font-family: "Aleo", serif;
-  font-weight: 700;
-  font-size: 5rem;
-  line-height: 96px;
-  color: #fff;
-}
-
-.text-explore {
-  font-family: "Aleo", serif;
-  font-weight: 700;
-  font-size: 20px;
-  line-height: 24px;
-  color: #fff;
-}
-
-.city-name {
-  font-family: "Red Hat Text", sans-serif;
-  font-weight: 500;
-  font-size: 32px;
-  line-height: 42px;
-  color: #fff;
 }
 
 .heading-stories {

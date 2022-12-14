@@ -33,8 +33,8 @@
         <h3 class="title">Explore the beauty of the World</h3>
         <h5 class="text-explore">Receive personalized recommendations for countries, hotels, activities and more</h5>
         <div class="search-container">
-          <input type="text" class="search" value = "What would you like to do?">
-          <button class="btn">Start Planning</button>
+          <input type="text" class="search" placeholder = "What would you like to do?">
+          <button class="btn btn-search">Start Planning</button>
         </div>
       </div>      
     </section>
@@ -43,15 +43,21 @@
       <div class="steps-container">
         <div class="steps-icon-container">
           <div class="steps-img-container">
-            <img src="./assets/icons/bike.svg" alt="bike-icon" class="steps-img">
+            <div class="steps-img">
+              <img src="./assets/icons/bike.svg" alt="bike-icon">
+            </div>
             <h5 class="text-steps">Tell us what you want to do</h5>
           </div>
           <div class="steps-img-container">
-            <img src="./assets/icons/calendar.svg" alt="bike-icon" class="steps-img">
+            <div class="steps-img">
+             <img src="./assets/icons/calendar.svg" alt="bike-icon">
+            </div>
             <h5 class="text-steps">Tell us what you want to do</h5>
           </div>
           <div class="steps-img-container">
-            <img src="./assets/icons/airplane.svg" alt="bike-icon" class="steps-img">
+            <div class="steps-img">
+              <img src="./assets/icons/airplane.svg" alt="bike-icon">
+            </div>
             <h5 class="text-steps">Tell us what you want to do</h5>
           </div>
         </div>
@@ -60,17 +66,17 @@
     <section class="section-destination">
       <h3 class="subtitle">POPULAR DESTINATIONS</h3>
       <div class="destination-container">
-        <picture>
+        <picture class="pictures-destination">
           <source media="(max-width: 550px)" srcset="./assets/images/mobile-spain.png">
           <img src="./assets/images/spain.png" alt="spain" class="destination-img">
           <span class="city-name">SPAIN</span>
         </picture>
-        <picture>
+        <picture class="pictures-destination">
           <source media="(max-width: 550px)" srcset="./assets/images/mobile-japan.png">
           <img src="./assets/images/japan.png" alt="japan" class="destination-img">
           <span class="city-name">JAPAN</span>
         </picture>
-        <picture>
+        <picture class="pictures-destination">
           <source media="(max-width: 550px)" srcset="./assets/images/mobile-san-francisco.png">
           <img src="./assets/images/san-francisco.png" alt="san-francisco" class="destination-img">
           <span class="city-name">USA</span>
@@ -85,53 +91,55 @@
     </section>
     <section class="section-stories">
       <h3 class="subtitle">TRAVEL STORIES</h3>
-      <div class="stories-container">
-        <div class="stories-img-container">
-          <picture>
-            <source media="(max-width: 550px)" srcset="./assets/images/mobile-stpries-thai.png">
-            <img class="img-stories" src="./assets/images/stories-thai.png" alt="Thailand" >
-          </picture>
-          <div>
-            <h4 class="heading-stories">10 Photos of Attractive Thailand</h4>
-            <p class="text-stories">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla.Lorem ipsum dolor sit a...<br></p>
-            <a class="link-read-more" href="#"><span>Read More</span></a>
-          </div>         
-        </div>
-        <div class="stories-img-container">
-          <picture>
-            <source media="(max-width: 550px)" srcset="./assets/images/mobile-stpries-wilds.png">
-            <img class="img-stories" src="./assets/images/stories-wilds.png" alt="Canyon" >
-          </picture>
-          <div>
-            <h4 class="heading-stories">Canyonlands National Park, Utah</h4>
-            <p class="text-stories">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla.Lorem ipsum dolor sit a...</p>
-            <a class="link-read-more" href="#"><span>Read More</span></a>
+      <div class="stories-background">
+        <div class="stories-container">
+          <div class="stories-img-container">
+            <picture>
+              <source media="(max-width: 550px)" srcset="./assets/images/mobile-stpries-thai.png">
+              <img class="img-stories" src="./assets/images/stories-thai.png" alt="Thailand" >
+            </picture>
+            <div>
+              <h4 class="heading-stories">10 Photos of Attractive Thailand</h4>
+              <p class="text-stories">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla.Lorem ipsum dolor sit a...<br></p>
+              <a class="link-read-more" href="#"><span>Read More</span></a>
+            </div>         
+          </div>
+          <div class="stories-img-container">
+            <picture>
+              <source media="(max-width: 550px)" srcset="./assets/images/mobile-stpries-wilds.png">
+              <img class="img-stories" src="./assets/images/stories-wilds.png" alt="Canyon" >
+            </picture>
+            <div>
+              <h4 class="heading-stories">Canyonlands National Park, Utah</h4>
+              <p class="text-stories">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla.Lorem ipsum dolor sit a...</p>
+              <a class="link-read-more" href="#"><span>Read More</span></a>
+            </div>
+          </div>
+          <div class="stories-img-container">
+            <picture>
+              <source media="(max-width: 550px)" srcset="./assets/images/mobile-stpries-mountains.png">
+              <img class="img-stories" src="./assets/images/stories-mountains.png" alt="Mountains">            
+            </picture>
+            <div>
+              <h4 class="heading-stories">I left my heart in the Mountains!</h4>
+              <p class="text-stories">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla.Lorem ipsum dolor sit a...</p>
+              <a class="link-read-more" href="#"><span>Read More</span></a>
+            </div>
+          </div>
+          <div class="stories-img-container">
+            <picture>
+              <source media="(max-width: 550px)" srcset="./assets/images/mobile-stpries-canyon.png">
+              <img class="img-stories" src="./assets/images/Rectangle 32.png" alt="Canyonlands">           
+            </picture>
+            <div>
+              <h4 class="heading-stories">The Longest journey in my life!</h4>
+              <p class="text-stories">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla.Lorem ipsum dolor sit a...</p>
+              <a class="link-read-more" href="#"><span>Read More</span></a>
+            </div>   
           </div>
         </div>
-        <div class="stories-img-container">
-          <picture>
-            <source media="(max-width: 550px)" srcset="./assets/images/mobile-stpries-mountains.png">
-            <img class="img-stories" src="./assets/images/stories-mountains.png" alt="Mountains">            
-          </picture>
-          <div>
-            <h4 class="heading-stories">I left my heart in the Mountains!</h4>
-            <p class="text-stories">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla.Lorem ipsum dolor sit a...</p>
-            <a class="link-read-more" href="#"><span>Read More</span></a>
-          </div>
-        </div>
-        <div class="stories-img-container">
-          <picture>
-            <source media="(max-width: 550px)" srcset="./assets/images/mobile-stpries-canyon.png">
-            <img class="img-stories" src="./assets/images/Rectangle 32.png" alt="Canyonlands">           
-          </picture>
-          <div>
-            <h4 class="heading-stories">The Longest journey in my life!</h4>
-            <p class="text-stories">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla.Lorem ipsum dolor sit a...</p>
-            <a class="link-read-more" href="#"><span>Read More</span></a>
-          </div>   
-        </div>
-      </div>
-      <button class="btn">See More</button>
+        <button class="btn">See More</button>
+      </div>   
     </section>
     <footer class="footer">
       <h3 class="footer-text">All Rights Reserved © Travel Portal vlaru 2022 rsschool</h3>
