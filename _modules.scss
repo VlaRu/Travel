@@ -1,0 +1,36 @@
+$font-red: 'Red Hat Text', sans-serif;
+$font-aleo: 'Aleo', serif;
+$font-magra: 'Magra', sans-serif;
+$primary-color: #0D606F;
+$main-color: #F2785C;
+$second-color: rgba(13, 96, 111, 0.5);
+$mobile: 575px;
+
+@mixin flex($d,$fd,$jc,$ai) {
+  display: $d;
+  flex-direction: $fd;
+  justify-content: $jc;
+  align-items: $ai;
+}
+
+
+@mixin font($ff,$fw,$fs) {
+  font-family: $ff;
+  font-weight: $fw;
+  font-size: $fs;
+}
+
+%tpl-main-btn{
+  width: 228px;
+  height: 59px;
+  background: $primary-color;
+  color: rgba(255, 255, 255);
+  box-shadow: 0px 0px 3px rgba(13, 96, 111, 0.08), 0px 2px 3px rgba(13, 96, 111, 0.16);
+  border-radius: 10px;
+  @include font($font-red,500,24px)
+}
+
+%tpl-subtitle{
+  color: $main-color;
+  @include font($font-red,500,40px)
+}

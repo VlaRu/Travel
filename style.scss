@@ -1,0 +1,145 @@
+@import "nullstyle.scss";
+@import "modules.scss";
+
+//  sass style.scss style.css
+section{
+  width: 1440px;
+}
+
+.container{ 
+  @include flex(flex,column,center,center);
+  background: url(./assets/images/main-bg.png) center top no-repeat, url(./assets/images/footer-bg.png) center bottom no-repeat;
+  @media screen and (max-width: $mobile){
+    background-image: url(./assets/images/mobile-bg.png), url(./assets/images/mobile-footer-bg.png);
+    background-size: contain;
+  }
+}
+
+header{
+  width: 100vw;
+  height: 90px;
+  @include flex(flex,row,space-around,center);
+  background: rgba(242, 120, 92, 0.7);
+  box-shadow: 0px 4px 4px rgba(13, 96, 111, 0.5)
+}
+
+.logo-container{
+  @include flex(flex,row,space-between,center);
+}
+
+.explore-container{
+  width: calc(548px / 892px * 100%);
+  margin-left: calc(120px / 1440px * 100%);
+  margin-top: 32px;
+}
+
+.section-steps{
+  @include flex(flex,column,space-between,center);
+}
+
+.steps-container{
+  width: calc( 1177px / 1440px * 100%);
+}
+
+.steps-icon-container{
+  
+  @include flex(flex,row,space-between,center);
+}
+
+.steps-img-container{
+  @include flex(flex,column,center,center);
+}
+
+.section-destination{
+  @include flex(flex,column,center,center);
+  overflow: hidden;
+}
+
+.destination-container{
+  width: calc( 2520px / 1440px * 100%);
+  @include flex(flex,row,space-between,center);
+}
+
+.destination-img{
+  border-radius: 16px;
+}
+
+.section-stories{
+  @include flex(flex,column,center,center);
+  background-color: rgba(255, 255, 255, 0.7);
+}
+
+.stories-img-container{
+  @include flex(flex,row,center,center);
+}
+
+.footer{
+  @include flex(flex,row,center,center);
+}
+
+.logo-text{
+  @include font($font-magra,600,32px);
+  line-height: 39px;
+  color: #fff;
+}
+
+.navigation{
+  @include font($font-red,500,16px);
+  line-height: 21px;
+  color: #fff;
+}
+
+.navigation-list{
+  @include flex(flex,row,space-between,center);
+}
+
+.title{
+  @include font($font-aleo,700,5rem);
+  line-height: 96px;
+  color: #fff;
+}
+
+.text-explore{
+  @include font($font-aleo,700,20px);
+  line-height: 24px;
+  color: #fff;
+}
+
+.city-name{
+  @include font($font-red,500,32px);
+  line-height: 42px;
+  color: #fff;
+}
+
+.heading-stories{
+  @include font($font-aleo,400,35px);
+  line-height: 42px;
+  color: $primary-color;
+}
+
+.btn{
+  @extend %tpl-main-btn;
+  line-height: 32px;
+}
+
+.btn-login{
+  width: 103px;
+  height: 41px;
+  background: $primary-color;
+  color: #fff;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 2px 3px rgba(13, 96, 111, 0.16);
+  border-radius: 10px; 
+  @include font($font-red,500,16px);
+  line-height: 21px;
+}
+
+.subtitle{
+  @extend %tpl-subtitle;
+  line-height: 53px;
+}
+
+.text-stories,.text-steps{
+  @include font($font-aleo,400,20px);
+  line-height: 24px;
+  color: $primary-color;
+}
