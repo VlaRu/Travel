@@ -16,7 +16,7 @@ section{
 }
 
 header{
-  width: 100vw;
+  width: 1440px;
   height: 90px;
   @include flex(flex,row,space-around,center);
   background: rgba(242, 120, 92, 0.7);
