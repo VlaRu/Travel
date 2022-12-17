@@ -4,7 +4,7 @@ $font-magra: 'Magra', sans-serif;
 $primary-color: #0D606F;
 $main-color: #F2785C;
 $second-color: rgba(13, 96, 111, 0.5);
-$mobile: 575px;
+$mobile: 390px;
 
 @mixin flex($d,$fd,$jc,$ai) {
   display: $d;
@@ -34,3 +34,5 @@ $mobile: 575px;
   color: $main-color;
   @include font($font-red,500,40px)
 }
+
+
