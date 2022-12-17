@@ -12,6 +12,12 @@ section{
   margin: 0 auto;
   background: url(./assets/images/main-bg.png) center top no-repeat, url(./assets/images/footer-bg.png) center bottom no-repeat;
   @media screen and (max-width: $mobile){
+    .subtitle{
+      @include font($font-red,500,14px);
+      line-height: 19px;
+    }
+
+    width: 390px;
     background-image: url(./assets/images/mobile-bg.png), url(./assets/images/mobile-footer-bg.png);
     background-size: contain;
   }
@@ -22,7 +28,31 @@ header{
   height: 90px;
   @include flex(flex,row,space-around,center);
   background: rgba(242, 120, 92, 0.7);
-  box-shadow: 0px 4px 4px rgba(13, 96, 111, 0.5)
+  box-shadow: 0px 4px 4px rgba(13, 96, 111, 0.5);
+
+  @media screen and (max-width: $mobile){
+    @include flex(flex,row,space-between,center);
+    padding-left: 5%;
+    width: 390px;
+    background: transparent;
+    box-shadow: none;
+
+    .logo-text{
+      display: none;
+    }
+
+    .navigation-list{
+      display: none;
+    }
+
+    .btn-login{
+      display: none;
+    }
+
+    .burger-menu-container {
+      display: block;
+    }
+  }
 }
 
 .logo-container{
@@ -34,12 +64,31 @@ header{
   margin-left: calc(120px / 1440px * 100%);
   margin-top: 32px;
   margin-bottom: 290px;
+
+  @media screen and (max-width: $mobile){
+    width: 90%;
+    margin-bottom: 80px;
+    margin-left: 0;
+    .title{
+      display: none;
+    }
+
+    .text-explore{
+      display: none;
+    }
+  }
 }
 
 .title{
   @include font($font-aleo,700,5rem);
   line-height: 96px;
   color: #fff;
+}
+
+.section-explore{
+  @media screen and (max-width: $mobile){
+    @include flex(flex,column,center,center);
+  }
 }
 
 .text-explore{
@@ -55,11 +104,25 @@ header{
   background: rgba(255, 255, 255, 0.7);
   border-radius: 16px;
 
+  @include font($font-aleo,400,24px);
+    line-height: 29px;
+    color: $main-color;
+    text-indent: 3%;
+
   &::placeholder{
     @include font($font-aleo,400,24px);
     line-height: 29px;
     color: $main-color;
     text-indent: 3%;
+  }
+
+  @media screen and (max-width: $mobile){
+    height: 50px;
+
+    &::placeholder{
+      @include font($font-aleo,400,14px);
+      line-height: 16px;
+    }
   }
 }
 
@@ -77,6 +140,29 @@ header{
   @include flex(flex,column,space-between,center);
   margin-top: 20px;
   margin-bottom: 100px;
+
+  @media screen and (max-width: $mobile){
+    margin-bottom: 20px;
+
+    .steps-container{
+      width: 90%;
+    }
+
+    .steps-img{
+      width: 70px;
+      height: 70px;
+      margin-bottom: 20px;
+    }
+
+    .text-steps{
+      @include font($font-aleo,400,11px);
+      line-height: 12px;
+    }
+
+    .steps-img-container{
+      width: calc( 110px / 390px *100%);
+    }
+  }
 }
 
 .steps-container{
@@ -98,19 +184,92 @@ header{
   @include flex(flex,row,center,center);
   background-color: $main-color;
   border-radius: 16px;
+  margin-bottom: 30px;
 }
 
 .section-destination{
   @include flex(flex,column,center,center);
   overflow: hidden;
+
+  @media screen and (max-width: $mobile){
+    .destination-img{
+      height: 210px;
+      width: 90vw;
+     
+    }
+
+    .destination-container{
+      height: 210px;
+      width: 90vw;
+      overflow: hidden;
+    }
+
+    .city-name{
+      position: absolute;
+      top: 5%;
+      @include font($font-red,500,20px);
+      line-height: 25px;
+    }
+
+    .destination-container{
+      @include flex(flex,row,left,center);
+      position: relative;
+      margin-top: 20px;
+      margin-bottom: 10px;
+    }
+
+    .arrow-left{
+      display: block;
+    }
+    
+    .arrow-right{
+      display: block;
+    }
+
+    .arrow-destination-right{
+      transform: scaleX(-1);
+    }
+    
+    .btn-destination{
+      position: absolute;
+      left: 50%;
+      bottom: -30px;
+      width: 30px;
+      height: 8px;
+      @include flex(flex,row,space-between,center);
+      margin-bottom: 0;
+    }
+  }
 }
 
 .destination-container{
-  width: calc( 2520px / 1440px * 100%);
-  @include flex(flex,row,space-between,center);
+  width: 235%;
+  @include flex(flex,row,center,center);
   margin-top: 45px;
   margin-bottom: 25px;
   height: 800px;
+
+}
+
+.arrow-left{
+  display: none;
+  width: 20px;
+  height: 50px;
+  z-index: 2;
+  top: 50%;
+  left: 20px;
+  position: absolute;
+  cursor: pointer;
+}
+
+.arrow-right{
+  top: 50%;
+  left: 300px;
+  display: none;
+  width: 20px;
+  height: 50px;
+  position: absolute;
+  cursor: pointer;
 }
 
 .pictures-destination{
@@ -121,6 +280,7 @@ header{
   width: 95%;
   height: 800px;
   border-radius: 16px;
+  cursor: pointer;
 }
 
 .city-name{
@@ -133,42 +293,140 @@ header{
 }
 
 .btn-destination{
- width: 80px;
- @include flex(flex,row,space-between,center);
- margin-bottom: 40px;
+  width: 80px;
+  height: 20px;
+  @include flex(flex,row,space-between,center);
+  margin-bottom: 40px;
+}
 
- .btn-elipse{
+.btn-elipse{
+  height: 100%;
+  width: 25%;
   background-color: rgba(242, 120, 92, 0.5);
   border-radius: 100%
  }
+
+ .active{
+  background-color: $main-color;
 }
 
 .section-stories{
   @include flex(flex,column,center,center);
   margin-top: 80px;
-  padding-bottom: 40px;
+  margin-bottom: 20px;
+
+  @media screen and (max-width: $mobile){
+    margin-top: 20px;
+    margin-bottom: 0;
+    .img-stories{
+      margin-right: 10px;
+    }
+
+    .heading-stories{
+      @include font($font-aleo,400,11px);
+      line-height: 13px;
+    }
+
+    .text-stories{
+      @include font($font-aleo,400,9px);
+      line-height: 11px;
+    }
+
+    .stories-container{
+      width: 90%;
+      padding-bottom: 0;
+      margin-top: 0;
+      margin-bottom: 0;
+    }
+
+    .stories-background{
+      margin-top: 10px;
+      margin-bottom: 0;
+      padding-bottom: 5px;
+      padding-top: 15px;
+    }
+
+    .stories-img-container{
+      margin-bottom: 10px;
+    }
+  }
+  
 }
 
 .stories-background{
   @include flex(flex,column,center,center);
   background-color: rgba(255, 255, 255, 0.7);
   margin-top: 40px;
+  padding-bottom: 30px;
 }
 
 .stories-container{
   width: calc( 1200px / 1440px * 100%);
   margin-top: 40px;
-  margin-bottom: 55px;
-}
-
-.stories-img-container{
-  @include flex(flex,row,center,center);
   margin-bottom: 30px;
 }
 
-.footer{
-  @include flex(flex,row,center,center);
+.stories-img-container{
+  @include flex(flex,row,center,flex-start);
+  margin-bottom: 30px;
 }
+
+.img-stories{
+  border-radius: 16px;
+  margin-right: 40px;
+}
+
+.container-stories-text{
+  position: relative;
+}
+.more {
+  display: none;
+}
+
+.link-read-more{
+  @include font($font-aleo,700,20px);
+  line-height: 24px;
+  text-decoration-line: underline;
+  color: $primary-color;
+  cursor: pointer;
+
+  @media screen and (max-width: 390px){
+    @include font($font-aleo,700,11px);
+  }
+}
+
+footer{
+  width: 100%;
+  @include font($font-red,500,16px);
+  @include flex(flex,row,flex-end,center);
+  padding-bottom: 20px;
+
+  @media screen and (max-width: $mobile) { 
+      height: 65px;
+      padding-bottom: 0;
+      @include flex(flex,row,center,center);
+
+      .footer-text{
+        display: none;
+      } 
+
+      .footer-logo-container{
+        width: calc( 140px / 390px *100%);
+        margin-right: 0;
+        margin-left: 0;
+      }
+
+  }
+}
+
+.footer-logo-container{
+  width: calc( 140px / 1440px * 100%);
+  @include flex(flex,row,space-between,center);
+  margin-right: calc( 120px / 1440px * 100%);
+  margin-left: calc( 300px / 1440px * 100%);
+  cursor: pointer;
+}
+
 
 .logo-text{
   @include font($font-magra,600,32px);
@@ -196,6 +454,12 @@ header{
 .btn{
   @extend %tpl-main-btn;
   line-height: 32px;
+
+  @media screen and (max-width: $mobile){
+    width: 92px;
+    height: 30px;
+    @include font($font-red,500,11px);
+  }
 }
 
 .btn-login{
@@ -218,4 +482,87 @@ header{
   @include font($font-aleo,400,20px);
   line-height: 24px;
   color: $primary-color;
+}
+
+/* burger menu */
+
+.burger-menu-container {
+  display: none;
+  height: 17px;
+}
+
+.burger-line{
+  position: absolute;
+  top: 48px;
+  right: 25px;
+  width: 26px;
+  height: 3px;
+  background-color: #fff;
+  border-radius: 5px;
+  transition: .3s all;
+}
+
+.second  {
+  top: 56px;
+}
+
+.third {
+  top: 64px;
+}
+
+
+.burger-nav-menu-container {
+  position: fixed;
+  z-index: 2;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  background-color: rgb(0, 0, 0, 0.8);
+  visibility: hidden;
+  opacity: 0;
+  transition: 0.3s;
+}
+
+.burger-nav-menu {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  right: 0;
+  top: 0;
+  z-index: 3;
+  width: 165px;
+  height: 250px;
+  background-color: #F2785C;
+  border-radius: 10px;
+  padding: 16px 15px 0 0;
+  transition: 0.3s;
+}
+
+.list-items-nav-container{
+  @include flex(flex,column,flex-end,end);
+  margin-right: 10px;
+}
+
+.list-items-nav {
+  display: inline-block;
+  list-style: none;
+  text-decoration: none;
+  font-family: 'Red Hat Text', sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 22px;
+  color: #ffff;
+  text-align: right;
+  padding-bottom: 10px;
+}
+
+.list-items-nav:hover {
+  font-size: 17px;
+  transition: 0.2s;
+}
+.icon-close {
+  margin-left: 16px;
+  margin-bottom: 15px;
 }
