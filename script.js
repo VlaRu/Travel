@@ -26,11 +26,20 @@ function iconClose() {
 
 
 let slide = document.querySelector(".destination-container");
+let imgSlide = document.querySelectorAll(".destination-img")
 
 //not working
 
 if (width < 390) {
   leftBtn()
+}
+
+function arrowLeft(){
+  spain()
+}
+
+function arrowRight(){
+  usa()
 }
 
 function leftBtn() {
