@@ -3,7 +3,10 @@
 let burgerNav = document.querySelector(".burger-nav-menu-container");
 let burgerBody = document.querySelector(".burger-nav-menu");
 let width = Math.max(document.documentElement.clientWidth);
-let btnSlide = document.querySelectorAll(".btn-elipse");
+let btnSlide = document.querySelectorAll(".btn-circle");
+let popupContainer = document.querySelector(".popup-container");
+let popup = document.querySelector(".popup");
+let popupSigIn = document.querySelector(".popup-sign");
 
 console.log(width);
 
@@ -18,7 +21,6 @@ function iconClose() {
   burgerNav.style.opacity = "0";
   burgerBody.style.right = "-300px"
 }
-
 
 //Slide desktop
 
@@ -81,7 +83,8 @@ function japan(){
   }
 }
 
-// show reed more text
+// show "reed more" text
+
 let btnText = document.querySelectorAll(".link-read-more");
 let dots = document.querySelectorAll(".dots");
 let moreText = document.querySelectorAll(".more");
@@ -106,3 +109,32 @@ btnText.forEach((item, i) =>{
     }
    }
 })
+
+
+// login
+
+function logIn() {
+  popupContainer.style.display = "flex";
+  popupContainer.style.top = "0";
+  popup.style.display = "flex";
+  popupSigIn.style.display = "none";
+}
+
+function sigIn() {
+  popupSigIn.style.display = "flex";
+  popup.style.display = "none";
+}
+
+
+//----close when click outside popup/modal------
+
+document.addEventListener("click", (event) => {
+  if(event.target.classList.contains("burger-nav-menu-container")){
+    iconClose()
+  }else if(event.target.classList.contains("popup-container")){
+    //popupContainer.style.display = "none";
+    popupContainer.style.top = "-1000px";
+  }else if(event.target.classList.contains("popup-container-sign")){
+    popupContainer.style.display = "none";
+  }
+});

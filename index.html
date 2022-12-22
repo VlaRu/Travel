@@ -40,8 +40,8 @@
               <li class="list-items-nav"><a href="#planning">Plan Your Trip</a></li>
               <li class="list-items-nav"><a href="#destination">Destinations</a></li>
               <li class="list-items-nav"><a href="#stories">Travel Stories</a></li>
-              <li class="list-items-nav" onclick="logIn()"><a href="#">Account</a></li>
               <li class="list-items-nav"><a href="#sicial_media">Social media</a></li>
+              <li class="list-items-nav" onclick="logIn()"><a href="#">Account</a></li>
           </ul>
         </div>
       </div> 
@@ -103,9 +103,9 @@
         <div class="arrow-right" onclick="arrowRight()"><img src="./assets/icons/arrow-transparent.svg" alt="arrow-right" class="arrow-destination arrow-destination-right"></div>
       </div>
       <div class="btn-destination">
-        <div class="btn-elipse" onclick="spain()"></div>
-        <div class="active btn-elipse" onclick="japan()"></div>
-        <div class="btn-elipse" onclick="usa()"></div>
+        <div class="btn-circle" onclick="spain()"></div>
+        <div class="active btn-circle" onclick="japan()"></div>
+        <div class="btn-circle" onclick="usa()"></div>
       </div>
       <button class="btn">Find More</button>
     </section>
@@ -170,6 +170,40 @@
       </div>
     </footer>
   </div>
+  <div class="popup-container">
+    <div class="popup">
+      <form action="Get" class="form-login">
+        <h2 class="heading-popup">Log in to your account</h2>
+        <button class="btn-facebook btn-popup"><img src="./assets/icons/facebook-icon.svg" alt="facebook-icon"> Sign In with Facebook</button>
+        <button class="btn-google btn-popup"><img src="./assets/icons/Google-icon.svg" alt="google-icon"> Sign In with Google</button>
+        <div class="line-container">
+          <div class="line"></div>     
+          <span class="text-line">or</span>
+          <div class="line"></div>
+        </div>
+        <label class="label" for="email">E-mail</label>
+        <input type="text" name="email" id="email" value="" class="input">
+        <label class="label" for="password">Password</label>
+        <input type="text" name="password" id="password" value="" class="input">
+        <button class="btn-sign btn-popup" onclick="sigInInput()">Sign In</button>
+        <a class="text-link link-forgot" href="#">Forgot Your Password?</a>
+        <div class="line-last"></div>
+        <h4 class="footer-text-popup">Don’t have an account?<a class="text-link link-register" href="#" onclick="sigIn()"> Register</a></h4>  
+      </form>
+    </div>
+    <div class="popup-sign">
+      <form action="Get" class="form-login">
+        <h2 class="heading-popup heading-sign">Create account</h2>
+        <label class="label" for="email">E-mail</label>
+        <input type="text" name="email" id="email" value="" class="input-sign">
+        <label class="label" for="password">Password</label>
+        <input type="text" name="password" id="password" value="" class="input-sign">
+        <button class="btn-sign-section">Sign In</button>
+        <div class="line-last-sign"></div>
+        <h4 class="footer-text-popup">Already have an account?<a class="text-link link-register" href="#" onclick="logIn()"> Log in</a></h4>  
+      </form>
+    </div>
+  </div>   
   <script src="script.js"></script>
 </body>
 </html>
