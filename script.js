@@ -1,4 +1,3 @@
-// burger
 
 let burgerNav = document.querySelector(".burger-nav-menu-container");
 let burgerBody = document.querySelector(".burger-nav-menu");
@@ -8,7 +7,7 @@ let popupContainer = document.querySelector(".popup-container");
 let popup = document.querySelector(".popup");
 let popupSigIn = document.querySelector(".popup-sign");
 
-console.log(width);
+// burger
 
 function openBurger() {
   burgerNav.style.visibility = "visible";
@@ -26,22 +25,41 @@ function iconClose() {
 
 //-----move slide-----------------
 
-
 let slide = document.querySelector(".destination-container");
-let imgSlide = document.querySelectorAll(".destination-img")
+let imgSlide = document.querySelectorAll(".destination-img");
+let Indx = 1;
 
-//not working
+function showSlides(n) {
+    if(n > imgSlide.length){
+      Indx = 1;
+    }
 
-if (width < 390) {
-  leftBtn()
+    if(n < 1){
+      Indx = imgSlide.length;
+    }
+
+    imgSlide.forEach(item => {
+        item.style.display = "none"
+    });
+
+    btnSlide.forEach(item => {
+      item.classList.remove("active");
+  });
+
+    imgSlide[Indx -1].style.display = "block";
+    btnSlide[Indx -1].classList.add("active");
+}
+
+function addSlides(n) {
+    showSlides(Indx += n)
 }
 
 function arrowLeft(){
-  spain()
+  addSlides(1) 
 }
 
 function arrowRight(){
-  usa()
+  addSlides(-1) 
 }
 
 function leftBtn() {
@@ -96,20 +114,25 @@ btnText.forEach((item, i) =>{
       dots[i].style.display = "inline";
       btnText[i].innerHTML = "Read More";
       moreText[i].style.display = "none";
-      if(width >= "390px"){
-        a.forEach((item) => item.style.marginBottom = "30px");
-      }else{
-        a.forEach((item) => item.style.marginBottom = "10px");
-      }
+      marginMobile()
     }else{
       dots[i].style.display = "none";
       btnText[i].innerHTML = "Read Less";
       moreText[i].style.display = "inline";
       a.forEach((item) => item.style.marginBottom = "0px");
+      
     }
    }
 })
 
+
+function marginMobile() {
+  a.forEach((item) => { 
+    if(width <= 390 ){return item.style.marginBottom = "10px"
+  }else{
+    return item.style.marginBottom = "30px"
+  }});
+}
 
 // login
 
