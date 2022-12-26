@@ -444,13 +444,36 @@ footer{
 
 .navigation-list{
   @include flex(flex,row,space-between,center);
+  
+}
+
+.list-items{
+  position: relative;
+
+  &::after {
+    bottom: -10px;
+    transform-origin: center;
+  }
+  &::after {
+    content: "";
+    width: 100%;
+    height: 4px;
+    background-color: #fff;
+    position: absolute;
+    left: 0;
+    transform: scaleX(0);
+    transition: transform 0.5s;
+  }
+  &:hover::after {
+      transform: scaleX(1);
+  }
 }
 
 .heading-stories{
   @include font($font-aleo,400,35px);
   line-height: 42px;
   color: $primary-color;
-}
+} 
 
 .btn{
   @extend %tpl-main-btn;
