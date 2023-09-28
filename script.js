@@ -162,3 +162,17 @@ document.addEventListener("click", (event) => {
     popupContainer.style.display = "none";
   }
 });
+
+//search form
+
+let btnSearch = document.querySelector('.btn-search');
+let search = document.querySelector('.search');
+
+btnSearch.addEventListener('click', getValueSearch())
+
+function getValueSearch(event) {
+  event.preventDefault()
+  console.log(search.value)
+  search.value = ''
+}
+
