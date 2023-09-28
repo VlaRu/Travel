@@ -12,13 +12,13 @@ let popupSigIn = document.querySelector(".popup-sign");
 function openBurger() {
   burgerNav.style.visibility = "visible";
   burgerNav.style.opacity = "1";
-  burgerBody.style.right = "0"
+  burgerBody.style.right = "0";
 }
 
 function iconClose() {
   burgerNav.style.visibility = "hidden";
   burgerNav.style.opacity = "0";
-  burgerBody.style.right = "-300px"
+  burgerBody.style.right = "-300px";
 }
 
 //Slide desktop
@@ -55,11 +55,11 @@ function addSlides(n) {
 }
 
 function arrowLeft(){
-  addSlides(1) 
+  addSlides(-1) 
 }
 
 function arrowRight(){
-  addSlides(-1) 
+  addSlides(1) 
 }
 
 function leftBtn() {
@@ -106,7 +106,8 @@ function japan(){
 let btnText = document.querySelectorAll(".link-read-more");
 let dots = document.querySelectorAll(".dots");
 let moreText = document.querySelectorAll(".more");
-let a = document.querySelectorAll(".stories-img-container")
+let textArea = document.querySelectorAll(".text-stories");
+ 
 
 btnText.forEach((item, i) =>{  
   item.onclick = () => {
@@ -114,25 +115,25 @@ btnText.forEach((item, i) =>{
       dots[i].style.display = "inline";
       btnText[i].innerHTML = "Read More";
       moreText[i].style.display = "none";
-      marginMobile()
+      textArea.forEach((item) => (item.style.overflowY = "hidden"));
+      /* marginMobile() */
     }else{
       dots[i].style.display = "none";
       btnText[i].innerHTML = "Read Less";
       moreText[i].style.display = "inline";
-      a.forEach((item) => item.style.marginBottom = "0px");
-      
+      textArea[i].style.overflowY = "scroll"; 
     }
    }
 })
 
 
-function marginMobile() {
+/* function marginMobile() {
   a.forEach((item) => { 
     if(width <= 390 ){return item.style.marginBottom = "10px"
   }else{
     return item.style.marginBottom = "30px"
   }});
-}
+} */
 
 // login
 

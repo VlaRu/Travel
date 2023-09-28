@@ -349,6 +349,7 @@ header{
 
     .stories-img-container{
       margin-bottom: 10px;
+      overflow: hidden;
     }
   }
   
@@ -380,6 +381,7 @@ header{
 .container-stories-text{
   position: relative;
 }
+
 .more {
   display: none;
 }
@@ -510,6 +512,7 @@ footer{
 
 .text-stories,.text-steps{
   @include font($font-aleo,400,20px);
+  max-height: 180px;
   line-height: 24px;
   color: $primary-color;
 }

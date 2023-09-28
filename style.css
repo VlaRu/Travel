@@ -479,6 +479,7 @@ header {
   }
   .section-stories .stories-img-container {
     margin-bottom: 10px;
+    overflow: hidden;
   }
 }
 
@@ -670,6 +671,7 @@ footer {
   font-family: "Aleo", serif;
   font-weight: 400;
   font-size: 20px;
+  max-height: 180px;
   line-height: 24px;
   color: #0D606F;
 }
