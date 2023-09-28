@@ -331,6 +331,7 @@ header{
     .text-stories{
       @include font($font-aleo,400,9px);
       line-height: 11px;
+      max-height: 100px;
     }
 
     .stories-container{
@@ -826,3 +827,29 @@ footer{
   @include font($font-aleo,400,20px);
   margin-bottom: 20px;
 }
+
+::-webkit-scrollbar {
+  width: 10px; /* Set the width of the scrollbar */
+}
+
+/* Track - The area around the thumb */
+::-webkit-scrollbar-track {
+  background-color: rgb(241 241 241 / 35%); /* Background color of the track */
+}
+
+/* Thumb - The draggable scrolling handle */
+::-webkit-scrollbar-thumb {
+  background-color: rgb(9 70 81 / 30%); /* Color of the thumb */
+  border-radius: 6px; /* Rounded corners */
+}
+
+/* Buttons - The up and down buttons */
+::-webkit-scrollbar-button {
+  display: none; /* Hide the up and down buttons (optional) */
+}
+
+
+
+
+
+
