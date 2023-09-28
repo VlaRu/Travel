@@ -165,14 +165,13 @@ document.addEventListener("click", (event) => {
 
 //search form
 
-let btnSearch = document.querySelector('.btn-search');
-let search = document.querySelector('.search');
+let searchForm = document.querySelector('#search-form');
+let searchInput = document.querySelector('.search');
 
-btnSearch.addEventListener('click', getValueSearch())
+searchForm.addEventListener('submit', function(e){
+  e.preventDefault();
+  searchInput.value = '';
+  }
+)
 
-function getValueSearch(event) {
-  event.preventDefault()
-  console.log(search.value)
-  search.value = ''
-}
 
